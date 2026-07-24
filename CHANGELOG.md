@@ -4,7 +4,7 @@ Dated build history of the homelab. Newest entries at the top. This is append-on
 
 ---
 
-## 2026-07-23 — Privacy architecture, WiFi gap identified, Mullvad rollout
+## 2026-07-16 — Privacy architecture, WiFi gap identified, Mullvad rollout
 
 - Documented the distinct roles of each privacy layer (local browsing, ISP visibility, IP-based tracking, device-to-device access, fingerprinting, data-at-rest) and clarified that Tailscale and Mullvad are complementary, not redundant.
 - Identified that household WiFi is broadcast by the Verizon gateway **upstream** of OPNsense — WiFi clients currently bypass all firewall/VLAN policy and any future router-level VPN.
@@ -15,7 +15,7 @@ Dated build history of the homelab. Newest entries at the top. This is append-on
 - Established `curl ipinfo.io` as the standard method to verify exit-node routing.
 - Confirmed the JGS524 unmanaged switch is suitable as a future port expander once the GS308E fills up (not yet installed).
 
-## 2026-07-23 — Jellyfin installed and verified end-to-end
+## 2026-07-18 — Jellyfin installed and verified end-to-end
 
 - Installed Jellyfin via TrueNAS Apps. Config/cache/transcode placed on `ssd-pool` (low-latency), media on `hdd-pool/media` subdatasets (bulk sequential storage), all under `apps:apps` ownership.
 - **Fixed a segfault crash loop:** the `jellyfin-cache` dataset had silently reverted to `root:root` ownership during a prior failed deploy; corrected to `apps:apps`, mode `770`.
